@@ -1,12 +1,15 @@
 import React from "react";
 
 import "./App.css";
-import ImageCard from "./components/ImageCard";
+import Header from "./components/Header";
+import RequestForm from "./components/RequestForm";
+import ImageList from "./components/ImageList";
 
 function App() {
   return (
     <div className="App">
-      <ImageCard />
+      <Header />
+      <RequestForm />
     </div>
   );
 }

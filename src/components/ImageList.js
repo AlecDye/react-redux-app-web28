@@ -1,8 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import ImageCard from "./ImageCard";
+
 const ImageList = () => {
-  return <></>;
+  return (
+    <>
+      <ImageCard />
+    </>
+  );
 };
 
 const mapStateToProps = state => {

@@ -1,8 +1,9 @@
-import { FETCH_DATA, UPDATE_DATA } from "../actions";
+import { FETCH_DATA, UPDATE_DATA, SET_ERROR } from "../actions";
 
 const initialState = {
-  imageArray: [],
-  isFetchingData: false
+  imageData: [],
+  isFetchingData: false,
+  error: ""
 };
 
 export const reducer = (state = initialState, action) => {
@@ -10,13 +11,19 @@ export const reducer = (state = initialState, action) => {
     case FETCH_DATA:
       return {
         ...state,
-        imageArray: [],
+        imageData: [],
         isFetchingData: true
       };
     case UPDATE_DATA:
       return {
         ...state,
-        imageArray: action.payload,
+        imageData: action.payload,
+        isFetchingData: false
+      };
+    case SET_ERROR:
+      return {
+        ...state,
+        error: action.payload,
         isFetchingData: false
       };
     default:

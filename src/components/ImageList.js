@@ -10,15 +10,18 @@ const ImageList = props => {
       {props.error ? (
         <div className="error">{props.error}</div>
       ) : (
-        props.imageArray.map(item => <ImageCard />)
+        props.imageData.map(item => (
+          <ImageCard key={item.id} url={item.url} author={item.author} />
+        ))
       )}
     </>
   );
 };
 
 const mapStateToProps = state => {
+  console.log(state);
   return {
-    imageArray: state.imageArray
+    imageData: state.imageData
   };
 };
 

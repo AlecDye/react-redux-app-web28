@@ -1,10 +1,11 @@
 import React from "react";
 
-const ImageCard = () => {
+const ImageCard = props => {
+  console.log("ImageCard", props);
   return (
-    <div>
-      {/* <img src={} alt={} /> */}
-      <p>Text</p>
+    <div className="image-card">
+      <img src={props.url} alt="Random" />
+      <p>Author: {props.author}</p>
     </div>
   );
 };

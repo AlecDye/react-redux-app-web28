@@ -3,17 +3,22 @@ import { connect } from "react-redux";
 
 import ImageCard from "./ImageCard";
 
-const ImageList = () => {
+const ImageList = props => {
+  console.log("ImageList", props);
   return (
     <>
-      <ImageCard />
+      {props.error ? (
+        <div className="error">{props.error}</div>
+      ) : (
+        props.imageArray.map(item => <ImageCard />)
+      )}
     </>
   );
 };
 
 const mapStateToProps = state => {
   return {
-    state
+    imageArray: state.imageArray
   };
 };
 

@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <RequestForm />
+      <ImageList />
     </div>
   );
 }

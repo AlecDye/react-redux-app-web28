@@ -10,7 +10,11 @@ const RequestForm = props => {
   };
   return (
     <>
-      <button onClick={handleGetData}>Click me</button>
+      {props.isFetchingData ? (
+        <div className="loading-text">Fetching images...</div>
+      ) : (
+        <button onClick={handleGetData}>Click me</button>
+      )}
     </>
   );
 };

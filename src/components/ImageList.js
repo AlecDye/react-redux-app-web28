@@ -11,7 +11,8 @@ const ImageList = props => {
         <div className="error">{props.error}</div>
       ) : (
         props.imageData.map(item => (
-          <ImageCard key={item.id} url={item.url} author={item.author} />
+          //   <ImageCard key={item.id} url={item.url} author={item.author} />
+          <ImageCard key={item.id} item={item} />
         ))
       )}
     </>

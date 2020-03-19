@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import { Button } from "@material-ui/core";
+
 import { getData } from "../actions";
 
 const RequestForm = props => {
@@ -13,7 +15,7 @@ const RequestForm = props => {
       {props.isFetchingData ? (
         <div className="loading-text">Fetching images...</div>
       ) : (
-        <button onClick={handleGetData}>Click me</button>
+        <Button onClick={handleGetData}>Click me</Button>
       )}
     </>
   );

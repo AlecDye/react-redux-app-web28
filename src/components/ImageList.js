@@ -4,9 +4,9 @@ import { connect } from "react-redux";
 import ImageCard from "./ImageCard";
 
 const ImageList = props => {
-  console.log("ImageList", props);
+  //   console.log("ImageList", props);
   return (
-    <>
+    <div className="card-container">
       {props.error ? (
         <div className="error">{props.error}</div>
       ) : (
@@ -15,7 +15,7 @@ const ImageList = props => {
           <ImageCard key={item.id} item={item} />
         ))
       )}
-    </>
+    </div>
   );
 };
 
